@@ -10,7 +10,7 @@ DSV can be downloaded it from [here.](http://accelrys.com/products/collaborative
 ### 2. Required packages
 For Linux installations, certain system libraries may be required for the correct operation of DSV.  
 
-#### 2.1. Packages in Manajaro repositories
+#### 2.1. Packages in Manjaro repositories
 * alsa-lib (i686)
 * e2fsprogs-libs (i686)
 * expat (i686)
@@ -69,14 +69,14 @@ DSV requires additional packages that are not find in Manjaro repos. To solve th
 ```
 sudo pacman -S yaourt
 ```
-##### 2.2.2. Now install requiered package:
+##### 2.2.2. Now install required package:
 
 ```
-yaourt -S lib32-libxpm
+yaourt -S lib32-libxpm lib32-gstreamer0.10 gstreamer0.10-base-plugins
 
 ```
 ### 3. DSV installation
-Once you installed all the required libraries.  Fill the information in the [**BIOVA webpage**](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php). You'll receive an email to download the DSV binary (Let's call it _DS2017R2Client.bin_ in this tutorial)
+Once you installed all the required libraries.  Fill the information in the [**BIOVA webpage**](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php). You'll receive an email to download the DSV binary (Let's call it **_DS2017R2Client.bin_** in this tutorial)
 #### 3.1. Make the binary executable
 ```
 chmod +x DS2017R2Client.bin
@@ -85,3 +85,27 @@ chmod +x DS2017R2Client.bin
 ```
 ./DS2017R2Client.bin
 ```
+You have to select the place in your system for the BIOVIA folder. (Default is **$HOME**). Inside of it, the installer will create two additional folders for the program and the license, called **DiscoveryStudio2017RC** and **LicensePack**, respectively.
+
+#### 3.3. Setting DSV
+We will get an error message if we try to run the application using the DSV Desktop Launcher. This system error is related to libpng16 library which need a higher version of libz.so.1 that is installed in BIOVIA folder. So, we are going to use libz installed in our Manjaro system. To do this, two steps are required:  
+
+
+##### 3.3.1. Backup libz files
+Go to **${HOME}/BIOVIA/DiscoveryStudio2017R2/lib** folder and change the name of the libz files:
+
+```
+mv libz.so bk_libz.so
+mv libz.so.1 bk_libz.so.1
+
+```
+##### 3.3.2. Create a symbolic link
+Staying in the **${HOME}/BIOVIA/DiscoveryStudio2017R2/lib** folder type:
+
+```
+sudo ln -s /usr/lib/libz.so ${PWD}/libz.so
+sudo ln -s /usr/lib/libz.so.1 ${PWD}/libz.so.1
+
+```
+
+Now launch the application again.  **_Don't forget to cross your fingers in the process!!_**
