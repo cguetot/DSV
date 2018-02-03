@@ -52,7 +52,7 @@ For Linux installations, certain system libraries may be required for the correc
 All these package can be installed by using the next command line:
 
 ```
-sudo pacman lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib32-keyutils lib32-krb5 lib32-gcc-libs lib32-libice lib32-libcap lib32-libsm lib32-libstdc++5 lib32-libx11 lib32-libxau lib32-libxdmcp lib32-libxext lib32-libxi lib32-libxmu libxpm lib32-libxrender lib32-libxtst lib32-pam lib32-cairo lib32-fontconfig lib32-glib2 lib32-bzip2 lib32-freetype2 lib32-libjpeg-turbo lib32-libtiff lib32-zlib lib32-libdrm lib32-libxdamage lib32-libxfixes lib32-libxxf86vm lib32-libxinerama tcsh bc --needed
+sudo pacman audit lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib32-keyutils lib32-krb5 lib32-gcc-libs lib32-libice lib32-libcap lib32-libsm lib32-libstdc++5 lib32-libx11 lib32-libxau lib32-libxdmcp lib32-libxext lib32-libxi lib32-libxmu libxpm lib32-libxrender lib32-libxtst lib32-pam lib32-cairo lib32-fontconfig lib32-glib2 lib32-bzip2 lib32-freetype2 lib32-libjpeg-turbo lib32-libtiff lib32-zlib lib32-libdrm lib32-libxdamage lib32-libxfixes lib32-libxxf86vm lib32-libxinerama tcsh bc --needed
 
 ```
 
@@ -65,6 +65,12 @@ DSV requires additional packages that are not find in Manjaro repos. To solve th
 
 1. Install yaourt package using
 ```
-sudo pacman -S yaourt
+sudo pacman -S yaourt 
+```
+2. Now install requiered package:
+
+```
+yaourt -S lib32-libxpm 
+
 ```
 
