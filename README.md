@@ -7,7 +7,7 @@ DSV can be downloaded it from [here.](http://accelrys.com/products/collaborative
 
 
 
-### 2. Required packages 
+### 2. Required packages
 For Linux installations, certain system libraries may be required for the correct operation of DSV.  
 
 #### 2.1. Packages in Manajaro repositories
@@ -47,9 +47,10 @@ For Linux installations, certain system libraries may be required for the correc
 * libXxf86vm (i686)
 * libXinerama (i686)
 * tcsh
-* bc 
+* bc
 
 All these package can be installed by using the next command line:
+
 
 ```
 sudo pacman -S audit lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib32-keyutils lib32-krb5 lib32-gcc-libs lib32-libice lib32-libcap lib32-libsm lib32-libstdc++5 lib32-libx11 lib32-libxau lib32-libxdmcp lib32-libxext lib32-libxi lib32-libxmu libxpm lib32-libxrender lib32-libxtst lib32-pam lib32-cairo lib32-fontconfig lib32-glib2 lib32-bzip2 lib32-freetype2 lib32-libjpeg-turbo lib32-libtiff lib32-zlib lib32-libdrm lib32-libxdamage lib32-libxfixes lib32-libxxf86vm lib32-libxinerama tcsh bc --needed
@@ -58,8 +59,7 @@ sudo pacman -S audit lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib3
 
 The `--needed` option will skip the already installed package in your system.  
 
-  
-  
+
 
 #### 2.2. Packages in Arch repository
 
@@ -67,12 +67,21 @@ DSV requires additional packages that are not find in Manjaro repos. To solve th
 
 ##### 2.2.1. Install yaourt package using
 ```
-sudo pacman -S yaourt 
+sudo pacman -S yaourt
 ```
 ##### 2.2.2. Now install requiered package:
 
 ```
-yaourt -S lib32-libxpm 
+yaourt -S lib32-libxpm
 
 ```
-
+### 3. DSV installation
+Once you installed all the required libraries.  Fill the information in the [**BIOVA webpage**](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php). You'll receive an email to download the DSV binary (Let's call it _DS2017R2Client.bin_ in this tutorial)
+#### 3.1. Make the binary executable
+```
+chmod +x DS2017R2Client.bin
+```
+##### 3.2. Run the installer
+```
+./DS2017R2Client.bin
+```
