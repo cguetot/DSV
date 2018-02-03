@@ -3,12 +3,13 @@
 ## Overview  
 
 [Discovery Studio Visualizer (DSV) is a free BIOVIA’s comprehensive predictive science application for the Life Sciences.  
-DSV can be downloaded it from [here](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php)
+DSV can be downloaded it from [here.](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php)  
 
 
 
 ## Required packages 
- 
+For Linux installations, certain system libraries may be required for the correct operation of DSV.  
+
 ### Packages in Manajaro repositories
 * alsa-lib (i686)
 * e2fsprogs-libs (i686)
@@ -51,17 +52,11 @@ DSV can be downloaded it from [here](http://accelrys.com/products/collaborative-
 All these package can be installed by using the next command line:
 
 ```
-sudo pacman lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib32-keyutils lib32-krb5 \
-lib32-gcc-libs lib32-libice lib32-libcap lib32-libsm lib32-libstdc++5 \
-lib32-libx11 lib32-libxau lib32-libxdmcp lib32-libxext lib32-libxi \
-lib32-libxmu libxpm lib32-libxrender lib32-libxtst lib32-pam lib32-cairo \
-lib32-fontconfig lib32-glib2 lib32-bzip2 lib32-freetype2 lib32-libjpeg-turbo \
-lib32-libtiff lib32-zlib lib32-libdrm lib32-libxdamage lib32-libxfixes \
-lib32-libxxf86vm lib32-libxinerama tcsh bc --needed
+sudo pacman lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib32-keyutils lib32-krb5 lib32-gcc-libs lib32-libice lib32-libcap lib32-libsm lib32-libstdc++5 lib32-libx11 lib32-libxau lib32-libxdmcp lib32-libxext lib32-libxi lib32-libxmu libxpm lib32-libxrender lib32-libxtst lib32-pam lib32-cairo lib32-fontconfig lib32-glib2 lib32-bzip2 lib32-freetype2 lib32-libjpeg-turbo lib32-libtiff lib32-zlib lib32-libdrm lib32-libxdamage lib32-libxfixes lib32-libxxf86vm lib32-libxinerama tcsh bc --needed
 
 ```
 
-The `--needed` option will skip the already installed package in your system.
+The `--needed` option will skip the already installed package in your system.  
 
 
 ### Packages in Arch repository
@@ -72,3 +67,4 @@ DSV requires additional packages that are not find in Manjaro repos. To solve th
 ```
 sudo pacman -S yaourt
 ```
+
