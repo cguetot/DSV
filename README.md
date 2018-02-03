@@ -1,16 +1,16 @@
-# How to intall Discovery Studio Visualizer on Manjaro Linux
+## How to intall Discovery Studio Visualizer on Manjaro Linux
 
-## Overview  
+### 1. Overview  
 
 [Discovery Studio Visualizer (DSV) is a free BIOVIA’s comprehensive predictive science application for the Life Sciences.  
 DSV can be downloaded it from [here.](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php)  
 
 
 
-## Required packages 
+### 2. Required packages 
 For Linux installations, certain system libraries may be required for the correct operation of DSV.  
 
-### Packages in Manajaro repositories
+#### 2.1. Packages in Manajaro repositories
 * alsa-lib (i686)
 * e2fsprogs-libs (i686)
 * expat (i686)
@@ -58,8 +58,10 @@ sudo pacman -S audit lib32-alsa-lib lib32-e2fsprogs lib32-expat lib32-glibc lib3
 
 The `--needed` option will skip the already installed package in your system.  
 
+  
+  
 
-### Packages in Arch repository
+#### 2.2. Packages in Arch repository
 
 DSV requires additional packages that are not find in Manjaro repos. To solve this, we will use **yaourt**:
 
