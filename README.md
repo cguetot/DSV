@@ -65,11 +65,11 @@ The `--needed` option will skip the already installed package in your system.
 
 DSV requires additional packages that are not find in Manjaro repos. To solve this, we will use **yaourt**:
 
-1. Install yaourt package using
+##### 2.2.1. Install yaourt package using
 ```
 sudo pacman -S yaourt 
 ```
-2. Now install requiered package:
+##### 2.2.2. Now install requiered package:
 
 ```
 yaourt -S lib32-libxpm 
