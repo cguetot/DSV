@@ -2,7 +2,7 @@
 
 ## 1. Overview  
 
-[Discovery Studio Visualizer (DSV) is a free BIOVIA’s comprehensive predictive science application for the Life Sciences.  
+Discovery Studio Visualizer (DSV) is a free BIOVIA’s comprehensive predictive science application for the Life Sciences.  
 DSV can be downloaded it from [here.](http://accelrys.com/products/collaborative-science/biovia-discovery-studio/visualization-download.php)  
 
 
