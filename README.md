@@ -114,4 +114,6 @@ sudo ln -s /usr/lib/libz.so.1 ${PWD}/libz.so.1
 
 ```
 
-Now launch the application again.  **_Don't forget to cross your fingers in the process!!_**
+Now launch the application again.  
+
+**_Don't forget to cross your fingers in the process!!_**
