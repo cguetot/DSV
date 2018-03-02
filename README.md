@@ -77,7 +77,7 @@ sudo pacman -S yaourt
 #### 2.2.2. Now install required package:
 
 ```
-yaourt -S lib32-libxpm lib32-gstreamer0.10 gstreamer0.10-base-plugins
+yaourt -S lib32-libxpm gstreamer0.10 gstreamer0.10-base gstreamer0.10-base-plugins gstreamer0.10-good gstreamer0.10-good-plugins
 
 ```
 ## 3. DSV installation
